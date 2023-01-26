@@ -1,5 +1,7 @@
 package week1;
 
+import java.util.Scanner;
+
 public class ArrayDemo {
     public static void main(String[] args) {
         int[] firstArray;
@@ -32,7 +34,17 @@ public class ArrayDemo {
         System.out.println("Element at 9: " +firstArray[9]);
 
         //user is prompted for a new value
-        System.out.println("Please enter a value: ");
+        Scanner sc = new Scanner(System.in);
+        try {
+            System.out.println("Please enter a value: ");
+            firstArray[10] = sc.nextInt();
+        } catch(ArrayIndexOutOfBoundsException e)
+        {
+            System.out.print("Too big value");
+        }
+
+
+
 
     }
 }
